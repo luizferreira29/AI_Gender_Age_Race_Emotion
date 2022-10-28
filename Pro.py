@@ -6,6 +6,7 @@ from IPython.display import Image
 path = "/content/testyoda2.png"
 Image(filename=path)
 
+## when a real human cut enforce_detection
 obj = DeepFace.analyze(
     img_path=path,
     actions=['age', 'gender', 'race', 'emotion'],
@@ -22,3 +23,5 @@ races = obj['race']
 max(races, key=races.get)
 
 obj['age']
+
+
